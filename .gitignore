@@ -1,0 +1,11 @@
+# Build artifacts (binary is CI-built; never committed).
+/llm-toolchain
+/probe
+
+# Base runtime data dirs.
+/base_/
+/data/
+/vaults/
+*.db
+*.db-shm
+*.db-wal
