@@ -76,3 +76,5 @@ The binary is **CI-built** (multi-arch, hanzoai self-hosted runners →
 | `--org` / `LLM_TOOLCHAIN_ORG` | `default` | default org scope |
 | `--vaultDir` / `VAULT_DIR` | (unset) | enables per-org encrypted SQLite shards |
 | `VAULT_MASTER_KEY` | (ephemeral) | 32-byte master KEK (from KMS in prod) |
+
+MIT OR Apache-2.0, at your option — see [HIP-0137](https://github.com/hanzoai/hips/blob/main/HIPs/hip-0137-one-license.md).
