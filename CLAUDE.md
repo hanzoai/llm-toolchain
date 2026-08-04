@@ -67,3 +67,11 @@ hand-edit `gen/`. Change the schema, regenerate, then update `server/`.
 - Push to GitHub from here unless asked.
 - Add plugins this one service doesn't need. Lean binary.
 - Touch the console — wiring is documented in README, not done here.
+
+## License
+
+Relicensed from BSD-3-Clause to the dual `MIT OR Apache-2.0` grant under
+HIP-0137 ("One License", `hanzoai/hips`). `LICENSE` states the dual grant;
+`LICENSE-MIT` and `LICENSE-APACHE` carry the full texts. The original BSD
+copyright line — `2026, Hanzo AI, Inc.` — carries over verbatim into
+`LICENSE-MIT`: the relicense changes the grant, not the copyright record.
