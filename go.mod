@@ -76,15 +76,15 @@ require (
 	github.com/luxfi/cache v1.3.1 // indirect
 	github.com/luxfi/compress v0.1.1 // indirect
 	github.com/luxfi/concurrent v0.1.1 // indirect
-	github.com/luxfi/consensus v1.36.2 // indirect
+	github.com/luxfi/consensus v1.36.81 // indirect
 	github.com/luxfi/constants v1.6.2 // indirect
-	github.com/luxfi/container v0.2.1 // indirect
+	github.com/luxfi/container v0.2.2 // indirect
 	github.com/luxfi/corona v0.10.4 // indirect
 	github.com/luxfi/crypto v1.20.2 // indirect
-	github.com/luxfi/database v1.21.1 // indirect
+	github.com/luxfi/database v1.21.5 // indirect
 	github.com/luxfi/dkg v0.3.5 // indirect
 	github.com/luxfi/fhe v1.8.2 // indirect
-	github.com/luxfi/geth v1.20.1 // indirect
+	github.com/luxfi/geth v1.20.2 // indirect
 	github.com/luxfi/ids v1.3.2 // indirect
 	github.com/luxfi/lattice/v7 v7.1.4 // indirect
 	github.com/luxfi/lens v0.2.1 // indirect
@@ -93,7 +93,7 @@ require (
 	github.com/luxfi/math/big v0.1.0 // indirect
 	github.com/luxfi/mdns v0.1.1 // indirect
 	github.com/luxfi/metric v1.8.1 // indirect
-	github.com/luxfi/mlwe v0.2.1 // indirect
+	github.com/luxfi/mlwe v0.3.0 // indirect
 	github.com/luxfi/mock v0.1.1 // indirect
 	github.com/luxfi/pq v1.1.0 // indirect
 	github.com/luxfi/pulsar v1.9.2 // indirect
