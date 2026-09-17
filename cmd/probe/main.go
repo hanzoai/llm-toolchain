@@ -13,6 +13,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"strings"
 	"time"
 
 	zaplib "github.com/luxfi/zap"
@@ -142,13 +143,13 @@ func run(addr, peer string) error {
 }
 
 func fmtLog(log []server.SendEvent) string {
-	out := ""
+	var out strings.Builder
 	for _, e := range log {
 		m := "create"
 		if e.Method == server.MethodSchemaGetAll {
 			m = "getAll"
 		}
-		out += fmt.Sprintf("%s(%s,p=%d,t=%d) ", e.Kind, m, e.PromiseID, e.Target)
+		fmt.Fprintf(&out, "%s(%s,p=%d,t=%d) ", e.Kind, m, e.PromiseID, e.Target)
 	}
-	return out
+	return out.String()
 }

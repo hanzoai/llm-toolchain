@@ -21,7 +21,7 @@ type Client struct {
 	peerID string
 	capBuf []byte
 
-	promiseSeq uint32 // monotonic PromiseID allocator
+	promiseSeq atomic.Uint32 // monotonic PromiseID allocator
 
 	logMu   sync.Mutex
 	sendLog *[]SendEvent
@@ -39,7 +39,7 @@ type SendEvent struct {
 	At        time.Time
 }
 
-var sendEventSeq uint64
+var sendEventSeq atomic.Uint64
 
 // pipelineIDSeq hands out process-unique promise ids for pipelined call groups,
 // starting high so they never collide with a per-client PromiseID.
@@ -69,7 +69,7 @@ func (c *Client) record(kind string, method, promiseID, target uint32) {
 	}
 	c.logMu.Lock()
 	*c.sendLog = append(*c.sendLog, SendEvent{
-		Seq:       atomic.AddUint64(&sendEventSeq, 1),
+		Seq:       sendEventSeq.Add(1),
 		Kind:      kind,
 		Method:    method,
 		PromiseID: promiseID,
@@ -79,7 +79,7 @@ func (c *Client) record(kind string, method, promiseID, target uint32) {
 	c.logMu.Unlock()
 }
 
-func (c *Client) nextPromise() uint32 { return atomic.AddUint32(&c.promiseSeq, 1) }
+func (c *Client) nextPromise() uint32 { return c.promiseSeq.Add(1) }
 
 // call ships one request (with the given payload) and blocks for its correlated
 // response.
